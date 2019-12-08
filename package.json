@@ -1,16 +1,18 @@
 {
-  "name": "advanced-react-webpack-babel-setup",
-  "version": "1.0.0",
+  "name": "my-advanced-react-webpack-babel-setup",
+  "version": "0.1.0-alpha.0",
   "description": "",
   "main": "index.js",
   "scripts": {
+    "generate-build-version": "node build-utils/generate-build-version.js",
+    "postbuild": "npm run generate-build-version",
     "start": "webpack-dev-server --config build-utils/webpack.config.js --env.env=dev",
     "build": "webpack --config build-utils/webpack.config.js --env.env=prod",
     "build:analyze": "npm run build -- --env.addon=bundleanalyze --env.addon=bundlevisualizer",
     "test": "echo \"Error: no test specified\" && exit 0"
   },
   "keywords": [],
-  "author": "Robin Wieruch <opensource@rwieruch.com> (https://www.robinwieruch.de)",
+  "author": "JG <jayrgee@fastmail.fm> (https://www.jayrgee.net/)",
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.6.4",
