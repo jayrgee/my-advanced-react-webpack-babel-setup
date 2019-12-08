@@ -1,6 +1,10 @@
 const path = require('path');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const AssetsPlugin = require('assets-webpack-plugin');
+
+const BUILD_DIRECTORY = 'dist';
+const BUILD_DROP_PATH = path.resolve(__dirname, '../', BUILD_DIRECTORY);
 
 module.exports = {
   entry: './src/index.js',
@@ -17,6 +21,11 @@ module.exports = {
     extensions: ['*', '.js', '.jsx'],
   },
   plugins: [
+    new AssetsPlugin({
+      filename: 'webpack.assets.json',
+      path: BUILD_DROP_PATH,
+      prettyPrint: true
+    }),
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       title: 'Advanced React with Webpack Setup',
@@ -24,8 +33,8 @@ module.exports = {
     }),
   ],
   output: {
-    path: path.resolve(__dirname, '../', 'dist'),
+    path: BUILD_DROP_PATH,
     publicPath: '/',
-    filename: 'bundle.js',
+    filename: '[name].[chunkhash].js',
   },
 };
