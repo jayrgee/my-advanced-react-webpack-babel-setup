@@ -8,7 +8,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - new project based on
   - https://github.com/rwieruch/advanced-react-webpack-babel-setup
-- more dev dependecies
-  - [jest](https://jestjs.io/)
-  - [enzyme](https://airbnb.io/enzyme/)
-  - [serve](https://github.com/zeit/serve)
+- add test config based on
+  - https://blog.sapegin.me/all/react-testing-3-jest-and-react-testing-library/

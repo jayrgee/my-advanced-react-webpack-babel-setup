@@ -25,7 +25,7 @@ Advanced React with Webpack Setup. How to set it up yourself:
 * Environment Variables
 * Webpack Add-Ons
 * ESLint + Prettier
-* _Jest + Enzyme_
+* _Jest + React Testing Library_
 
 ## DIY Add-Ons
 
