@@ -1,6 +1,6 @@
 # my-advanced-react-webpack-babel-setup
 
-forked from https://github.com/rwieruch/advanced-react-webpack-babel-setup
+my fork of https://github.com/rwieruch/advanced-react-webpack-babel-setup
 
 Advanced React with Webpack Setup. How to set it up yourself:
 
@@ -25,7 +25,7 @@ Advanced React with Webpack Setup. How to set it up yourself:
 * Environment Variables
 * Webpack Add-Ons
 * ESLint + Prettier
-* Jest + Enzyme
+* _Jest + Enzyme_
 
 ## DIY Add-Ons
 
