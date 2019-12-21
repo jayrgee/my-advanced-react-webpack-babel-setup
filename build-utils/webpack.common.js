@@ -20,7 +20,7 @@ module.exports = {
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       title: 'Advanced React with Webpack Setup',
-      template: './src/index.html',
+      template: './public/index.html',
     }),
   ],
   output: {
