@@ -1,5 +1,6 @@
 const path = require('path');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
@@ -18,6 +19,7 @@ module.exports = {
   },
   plugins: [
     new CleanWebpackPlugin(),
+    new CopyPlugin(['public/config.json']),
     new HtmlWebpackPlugin({
       title: 'Advanced React with Webpack Setup',
       template: './public/index.html',
