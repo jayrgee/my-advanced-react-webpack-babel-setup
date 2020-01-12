@@ -13,5 +13,8 @@ module.exports = {
   devServer: {
     contentBase: './dist',
     hot: true,
+    https: false,
+    pfx: 'c:/mypfx.pfx',
+    pfxPassphrase: '1234',
   },
 };

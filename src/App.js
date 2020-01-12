@@ -1,10 +1,10 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React, { useContext } from 'react';
 
-const App = ({ title }) => <div>{title}</div>;
+import { ConfigContext } from './Config';
 
-App.propTypes = {
-  title: PropTypes.string.isRequired,
+const App = () => {
+  const { title } = useContext(ConfigContext);
+  return <div>{title}</div>;
 };
 
 export default App;
