@@ -3,14 +3,13 @@ import axios from 'axios';
 
 const defaultConfig = { foo: 'bar', title: 'here be the default title' };
 
-const getConfig = async cb => {
+const getConfig = async () => {
   try {
     const response = await axios.get('config.json');
     const { data } = response;
-    const config = { ...defaultConfig, ...data };
-    cb(config);
+    return { ...defaultConfig, ...data };
   } catch (error) {
-    cb(defaultConfig);
+    return defaultConfig;
   }
 };
 

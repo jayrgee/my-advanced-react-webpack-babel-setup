@@ -8,7 +8,7 @@ import packageJson from '../package.json';
 
 global.appVersion = packageJson.version;
 
-getConfig(config => {
+getConfig().then(config => {
   ReactDOM.render(
     <ConfigContext.Provider value={config}>
       <App />
