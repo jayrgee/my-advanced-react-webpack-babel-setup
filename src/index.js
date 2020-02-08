@@ -2,17 +2,17 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import App from './App';
-import { ConfigContext, getConfig } from './Config';
+import { ConfigProvider, getConfig } from './Config';
 
 import packageJson from '../package.json';
 
 global.appVersion = packageJson.version;
 
-getConfig().then(config => {
+getConfig({ title: 'default title' }).then(config => {
   ReactDOM.render(
-    <ConfigContext.Provider value={config}>
+    <ConfigProvider config={config}>
       <App />
-    </ConfigContext.Provider>,
+    </ConfigProvider>,
     document.getElementById('app')
   );
 });
