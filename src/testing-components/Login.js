@@ -11,18 +11,20 @@ export default function Login({ onSubmit }) {
   return (
     <form onSubmit={handleSubmit} data-testid="loginForm">
       <h3>Login</h3>
-      <label>
+      <label htmlFor="username">
         Username
         <input
+          id="username"
           name="username"
           value={username}
           onChange={event => setUsername(event.target.value)}
           data-testid="loginForm-username"
         />
       </label>
-      <label>
+      <label htmlFor="password">
         Password
         <input
+          id="password"
           name="password"
           type="password"
           value={password}

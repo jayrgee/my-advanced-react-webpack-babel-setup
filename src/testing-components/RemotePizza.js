@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 import { fetchIngredients as defaultFetchIngredients } from '../services';
 
 export default function RemotePizza({ fetchIngredients }) {
@@ -13,7 +15,9 @@ export default function RemotePizza({ fetchIngredients }) {
   return (
     <>
       <h3>Pizza</h3>
-      <button onClick={handleCook}>Cook</button>
+      <button type="button" onClick={handleCook}>
+        Cook
+      </button>
       {ingredients.length > 0 && (
         <ul>
           {ingredients.map(ingredient => (
@@ -27,4 +31,7 @@ export default function RemotePizza({ fetchIngredients }) {
 
 RemotePizza.defaultProps = {
   fetchIngredients: defaultFetchIngredients,
+};
+RemotePizza.propTypes = {
+  fetchIngredients: PropTypes.func,
 };

@@ -7,9 +7,7 @@ describe('testing event handlers', () => {
     const username = 'me';
     const password = 'please';
     const onSubmit = jest.fn();
-    const { getByLabelText, getByText } = render(
-      <Login onSubmit={onSubmit} />
-    );
+    const { getByLabelText, getByText } = render(<Login onSubmit={onSubmit} />);
 
     fireEvent.change(getByLabelText(/username/i), {
       target: { value: username },

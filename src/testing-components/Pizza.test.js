@@ -4,12 +4,7 @@ import Pizza from './Pizza';
 
 describe('testing rendering', () => {
   test('contains all ingredients', () => {
-    const ingredients = [
-      'bacon',
-      'tomato',
-      'mozzarella',
-      'pineapples',
-    ];
+    const ingredients = ['bacon', 'tomato', 'mozzarella', 'pineapples'];
     const { getByText } = render(<Pizza ingredients={ingredients} />);
 
     ingredients.forEach(ingredient => {

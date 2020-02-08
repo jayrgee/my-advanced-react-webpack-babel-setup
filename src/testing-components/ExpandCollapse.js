@@ -8,6 +8,7 @@ export default function ExpandCollapse({ excerpt, children }) {
       <h3>
         {excerpt}
         <button
+          type="button"
           aria-expanded={isExpanded ? 'true' : 'false'}
           onClick={() => setExpanded(!isExpanded)}
         >
