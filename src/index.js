@@ -2,13 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import App from './App';
-import { ConfigProvider, fetchConfig } from './Config';
+import ConfigProvider, { fetchConfig } from './components/ConfigProvider';
 
 import packageJson from '../package.json';
 
 global.appVersion = packageJson.version;
 
-fetchConfig({ title: 'default title' }).then(config => {
+fetchConfig({ title: packageJson.name }).then(config => {
   ReactDOM.render(
     <ConfigProvider config={config}>
       <App />
