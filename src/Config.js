@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 import axios from 'axios';
 
-export const ConfigContext = React.createContext(null);
+const ConfigContext = React.createContext(null);
 
 export function ConfigProvider({ config, children }) {
   return (
@@ -14,7 +14,7 @@ ConfigProvider.propTypes = {
   children: PropTypes.node.isRequired,
 };
 
-export const getConfig = async (defaultConfig = {}) => {
+export const fetchConfig = async (defaultConfig = {}) => {
   try {
     const response = await axios.get('config.json');
     const { data } = response;
@@ -23,3 +23,5 @@ export const getConfig = async (defaultConfig = {}) => {
     return defaultConfig;
   }
 };
+
+export const useConfig = () => useContext(ConfigContext);

@@ -1,9 +1,9 @@
-import React, { useContext } from 'react';
+import React from 'react';
 
-import { ConfigContext } from './Config';
+import { useConfig } from './Config';
 
 const App = () => {
-  const { title } = useContext(ConfigContext);
+  const { title } = useConfig();
   return <div>{title}</div>;
 };
 
