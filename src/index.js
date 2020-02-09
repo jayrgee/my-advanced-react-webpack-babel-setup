@@ -8,7 +8,9 @@ import packageJson from '../package.json';
 
 global.appVersion = packageJson.version;
 
-fetchConfig({ title: packageJson.name }).then(config => {
+const defaultConfig = { title: packageJson.name };
+
+fetchConfig(defaultConfig).then(config => {
   ReactDOM.render(
     <ConfigProvider config={config}>
       <App />
